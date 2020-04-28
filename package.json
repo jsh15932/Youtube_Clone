@@ -1,0 +1,10 @@
+{
+  "name": "youtube_clone_project",
+  "version": "1.0.0",
+  "description": "Youtube Clone with Vanilla and Nodejs",
+  "main": "index.js",
+  "author": "jsh15932",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
