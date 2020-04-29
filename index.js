@@ -1,15 +1,20 @@
-import express from "express";
+const express = require("express");
+const morgan = require("morgan");
+const helmet = require("helmet");
+
 const app = express();
 
 const PORT = 4000;
 
 const handleListening = () => 
-    console.log('Listening on: http://localhost:${PORT}');
+    console.log("Listening on: http://localhost:${PORT}");
 
 const handleHome = (req, res) => res.send("Hello from Home!");
 
 const handleProfile = (req, res) => res.send("You are on my Profile");
 
+app.use(helmet());
+app.use(morgan("dev"));
 
 app.get("/", handleHome);
 
